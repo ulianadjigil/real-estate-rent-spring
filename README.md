@@ -1,9 +1,6 @@
 # real-estate-rent-spring
 ## Task
-<img src="https://user-images.githubusercontent.com/85234616/121822292-ff03ab00-cca6-11eb-8157-d2be63ce5dd6.jpg" width="500">
-Формула:
- <img src="https://user-images.githubusercontent.com/85234616/121822461-da5c0300-cca7-11eb-8dbf-b628b828f8c4.jpg" width="200">
-
+<img width="750" alt="Снимок экрана 2022-07-22 в 19 30 09" src="https://user-images.githubusercontent.com/85234616/180483547-ef8dae6f-747f-4cee-895d-d93df1663f93.png">
 ## Solution
 In **index.jsp** we can enter into the input only numbers with no more than 3 numbers after the decimal point. When user has sent filled form, action **TestServlet** starts.
 
