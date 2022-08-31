@@ -1,11 +1,7 @@
 package com.example.realestaterent.service;
 
-import com.example.realestaterent.entity.AddressEntity;
 import com.example.realestaterent.entity.OwnerEntity;
-import com.example.realestaterent.entity.PropertyEntity;
 import com.example.realestaterent.exception.OwnerNotFoundException;
-import com.example.realestaterent.model.Owner;
-import com.example.realestaterent.model.Property;
 import com.example.realestaterent.repository.OwnerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
