@@ -1,35 +1,45 @@
 package com.example.realestaterent.entity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "owner")
-public class OwnerEntity {
+@ApiModel(value = "owner")
+public class OwnerEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(value = "idowner")
     private Long idowner;
     @Column(nullable = false)
+    @ApiModelProperty(value = "name", required = true)
     private String name;
     @Column(nullable = false)
+    @ApiModelProperty(value = "surname", required = true)
     private String surname;
     @Column(nullable = false)
+    @ApiModelProperty(value = "patronymic", required = true)
     private String patronymic;
     @Column(unique = true, nullable = false)
+    @ApiModelProperty(value = "email", required = true)
     private String email;
     @Column(unique = true, nullable = false)
+    @ApiModelProperty(value = "phone", required = true)
     private String phone;
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.REMOVE,
             orphanRemoval = true)
-    private Set<PropertyEntity> propertyEntitySet = new TreeSet<>();
+    @ApiModelProperty(value = "propertyEntityList")
+    private List<PropertyEntity> propertyEntityList = new ArrayList<>();
 
     public OwnerEntity() {
     }
 
-    public OwnerEntity(Long idowner, String name, String surname, String patronymic, String email, String phone) {
-        this.idowner = idowner;
+    public OwnerEntity(String name, String surname, String patronymic, String email, String phone) {
         this.name = name;
         this.surname = surname;
         this.patronymic = patronymic;
@@ -37,11 +47,11 @@ public class OwnerEntity {
         this.phone = phone;
     }
 
-    public Long getIdowner() {
+    public Long getIdOwner() {
         return idowner;
     }
 
-    public void setIdowner(Long idowner) {
+    public void setIdOwner(Long idowner) {
         this.idowner = idowner;
     }
 
@@ -85,11 +95,11 @@ public class OwnerEntity {
         this.phone = phone;
     }
 
-    public Set<PropertyEntity> getPropertyEntitySet() {
-        return propertyEntitySet;
+    public List<PropertyEntity> getPropertyEntityList() {
+        return propertyEntityList;
     }
 
-    public void setPropertyEntitySet(Set<PropertyEntity> propertyEntitySet) {
-        this.propertyEntitySet = propertyEntitySet;
+    public void setPropertyEntityList(List<PropertyEntity> propertyEntityList) {
+        this.propertyEntityList = propertyEntityList;
     }
 }

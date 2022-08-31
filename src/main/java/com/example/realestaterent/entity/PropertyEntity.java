@@ -1,6 +1,7 @@
 package com.example.realestaterent.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModel;
 
 import javax.persistence.*;
 
@@ -62,11 +63,11 @@ public class PropertyEntity {
     }
 
 
-    public Long getIdproperty() {
+    public Long getIdProperty() {
         return idproperty;
     }
 
-    public void setIdproperty(Long idproperty) {
+    public void setIdProperty(Long idproperty) {
         this.idproperty = idproperty;
     }
 
@@ -149,4 +150,5 @@ public class PropertyEntity {
     public void setAddress(AddressEntity address) {
         this.address = address;
     }
+
 }

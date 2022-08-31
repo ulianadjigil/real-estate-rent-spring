@@ -1,36 +1,53 @@
 package com.example.realestaterent.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "property")
 public class Property {
-    private Long idproperty;
+    @ApiModelProperty(value = "id")
+    private Long id;
+    @ApiModelProperty(value = "propertyType", required = true)
     private String propertyType;
-
+    @ApiModelProperty(value = "rentType", required = true)
     private String rentType;
-
+    @ApiModelProperty(value = "roomsAmount", required = true)
     private String roomsAmount;
-
+    @ApiModelProperty(value = " square", required = true)
     private String square;
-
+    @ApiModelProperty(value = "floor")
     private String floor;
-
+    @ApiModelProperty(value = "priceDollar", required = true)
     private String priceDollar;
-
+    @ApiModelProperty(value = "description")
     private String description;
-
+    @ApiModelProperty(value = "photo")
     private String photo;
+    @ApiModelProperty(value = "ownerId")
+    private Long ownerId;
+    @ApiModelProperty(value = "addressId")
+    private Long addressId;
 
-    private Long owner_idowner;
-
-    private Long address_idaddress;
-
-    public Property() {
+    public Property(Long id, String propertyType, String rentType, String roomsAmount, String square, String floor, String priceDollar, String description, String photo, Long ownerId, Long addressId) {
+        this.id = id;
+        this.propertyType = propertyType;
+        this.rentType = rentType;
+        this.roomsAmount = roomsAmount;
+        this.square = square;
+        this.floor = floor;
+        this.priceDollar = priceDollar;
+        this.description = description;
+        this.photo = photo;
+        this.ownerId = ownerId;
+        this.addressId = addressId;
     }
 
-    public Long getIdproperty() {
-        return idproperty;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdproperty(Long idproperty) {
-        this.idproperty = idproperty;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPropertyType() {
@@ -97,19 +114,36 @@ public class Property {
         this.photo = photo;
     }
 
-    public Long getOwner_idowner() {
-        return owner_idowner;
+    public Long getOwnerId() {
+        return ownerId;
     }
 
-    public void setOwner_idowner(Long owner_idowner) {
-        this.owner_idowner = owner_idowner;
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
     }
 
-    public Long getAddress_idaddress() {
-        return address_idaddress;
+    public Long getAddressId() {
+        return addressId;
     }
 
-    public void setAddress_idaddress(Long address_idaddress) {
-        this.address_idaddress = address_idaddress;
+    public void setAddressId(Long addressId) {
+        this.addressId = addressId;
+    }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "id=" + id +
+                ", propertyType='" + propertyType + '\'' +
+                ", rentType='" + rentType + '\'' +
+                ", roomsAmount='" + roomsAmount + '\'' +
+                ", square='" + square + '\'' +
+                ", floor='" + floor + '\'' +
+                ", priceDollar='" + priceDollar + '\'' +
+                ", description='" + description + '\'' +
+                ", photo='" + photo + '\'' +
+                ", ownerId=" + ownerId +
+                ", addressId=" + addressId +
+                '}';
     }
 }

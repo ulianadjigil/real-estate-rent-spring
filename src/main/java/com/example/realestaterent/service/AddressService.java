@@ -13,15 +13,15 @@ public class AddressService {
     @Autowired
     private AddressRepo addressRepo;
 
-    public AddressEntity getOne(Long id) throws Exception {
-        AddressEntity address = addressRepo.findById(id).get();
+    public AddressEntity getOne(Long id) throws AddressNotFoundException {
+        AddressEntity address = addressRepo.findById(id).orElse(null);
         if (address == null) {
             throw new AddressNotFoundException();
         }
         return address;
     }
 
-    public List<AddressEntity> getAll() throws Exception {
+    public List<AddressEntity> getAll() throws AddressNotFoundException {
         List<AddressEntity> address = (List<AddressEntity>) addressRepo.findAll();
         if (address.isEmpty()) {
             throw new AddressNotFoundException();
@@ -34,12 +34,21 @@ public class AddressService {
         return address;
     }
 
-    public AddressEntity update(AddressEntity address) {
-        create(address);
+    public AddressEntity update(Long id, AddressEntity addressData) throws AddressNotFoundException{
+        AddressEntity address = addressRepo.findById(id).orElse(null);
+        if (address == null) {
+            throw new AddressNotFoundException();
+        }
+        addressData.setIdAddress(id);
+        addressRepo.save(addressData);
         return address;
     }
 
-    public Long deleteOne(Long id) {
+    public Long deleteOne(Long id) throws AddressNotFoundException{
+        AddressEntity address = addressRepo.findById(id).orElse(null);
+        if (address == null) {
+            throw new AddressNotFoundException();
+        }
         addressRepo.deleteById(id);
         return id;
     }
