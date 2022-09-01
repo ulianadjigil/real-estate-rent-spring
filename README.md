@@ -4,7 +4,8 @@
 
 
 ## Solution
-Структура базы данных.
+Структура базы данных
+
 <img width="650" alt="Снимок экрана 2022-09-01 в 19 24 28" src="https://user-images.githubusercontent.com/85234616/187964654-2068e079-6c8a-46fb-b81c-8b74b1c76eea.png">
 
 DoPost method is used in the servlet to process the request.
