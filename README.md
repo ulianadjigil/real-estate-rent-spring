@@ -1,6 +1,6 @@
 # real-estate-rent-spring
 ## Task
-<img width="748" alt="Снимок экрана 2022-07-22 в 19 34 16" src="https://user-images.githubusercontent.com/85234616/180484195-35f28cea-8df7-489b-a820-a0d7034303d2.png">
+<img width="684" alt="Снимок экрана 2022-09-01 в 20 05 34" src="https://user-images.githubusercontent.com/85234616/187972005-0288b196-eb2e-4fe6-bb5f-5599c05bc3bf.png">
 
 ## Solution
 Структура базы данных
