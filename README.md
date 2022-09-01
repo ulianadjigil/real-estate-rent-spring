@@ -2,10 +2,10 @@
 ## Task
 <img width="748" alt="Снимок экрана 2022-07-22 в 19 34 16" src="https://user-images.githubusercontent.com/85234616/180484195-35f28cea-8df7-489b-a820-a0d7034303d2.png">
 
-## Solution
-In **index.jsp** we can enter into the input only numbers with no more than 3 numbers after the decimal point. When user has sent filled form, action **TestServlet** starts.
 
-<img width="690" alt="Снимок экрана 2021-06-14 в 00 58 21" src="https://user-images.githubusercontent.com/85234616/121823092-ad115400-ccab-11eb-8ea8-41be820fff89.png">
+## Solution
+Структура базы данных.
+<img width="650" alt="Снимок экрана 2022-09-01 в 19 24 28" src="https://user-images.githubusercontent.com/85234616/187964654-2068e079-6c8a-46fb-b81c-8b74b1c76eea.png">
 
 DoPost method is used in the servlet to process the request.
 
