@@ -2,7 +2,7 @@
 ## Task
 <img width="684" alt="Снимок экрана 2022-09-01 в 20 05 34" src="https://user-images.githubusercontent.com/85234616/187972005-0288b196-eb2e-4fe6-bb5f-5599c05bc3bf.png">
 
-## Solution
+## Result
 Структура базы данных
 
 <img width="650" alt="Снимок экрана 2022-09-01 в 19 24 28" src="https://user-images.githubusercontent.com/85234616/187964654-2068e079-6c8a-46fb-b81c-8b74b1c76eea.png">
@@ -20,8 +20,3 @@ Postman тесты
 
 Тут будет ссылка на документацию которую можно посмотреть
 
-
-
-## Result
-<img width="392" alt="Снимок экрана 2021-06-13 в 23 31 13" src="https://user-images.githubusercontent.com/85234616/121822985-03ca5e00-ccab-11eb-8b13-ab6fe9d2ca1b.png">
-<img width="403" alt="Снимок экрана 2021-06-13 в 23 31 55" src="https://user-images.githubusercontent.com/85234616/121822989-07f67b80-ccab-11eb-96cd-bf729414462b.png">
